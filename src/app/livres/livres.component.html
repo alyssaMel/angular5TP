@@ -1,0 +1,54 @@
+<h2> Liste des livres disponibles </h2>
+
+<!-- Partie 01 -->
+<!--<ul>-->
+  <!--<li>{{ livres[0].titre }}</li>-->
+  <!--<li>{{ livres[1].titre }}</li>-->
+  <!--<li>{{ livres[2].titre }}</li>-->
+  <!--<li>{{ livres[3].titre }}</li>-->
+<!--</ul>-->
+
+<!--&lt;!&ndash; Partie 02 &ndash;&gt;-->
+<!--<div id="bookListWrapper">-->
+  <!--<ul class="list-unstyled">-->
+    <!--&lt;!&ndash; Livre 1 &ndash;&gt;-->
+    <!--<li class="book"-->
+        <!--[ngStyle]="{'background': 'url(../../assets/images/' + livres[0].image + ') no-repeat' } ">-->
+      <!--<div class="book-details clearfix">-->
+        <!--<h3 class="text-primary">{{ livres[0].titre }}</h3>-->
+        <!--<p class="text-red">{{ livres[0].prix }}</p>-->
+        <!--<ul class="list-unstyled list-inline">-->
+          <!--<li>Genre: {{ livres[0].collection }}</li>-->
+          <!--<li>Editeur: {{ livres[0].editeur }}</li>-->
+          <!--<li>Parution: {{ livres[0].parution }}</li>-->
+        <!--</ul>-->
+        <!--<button class="btn btn-default" (click)="afficherDescription()">{{ buttonText }}</button>-->
+        <!--<p class="description" *ngIf="isDisplayed">{{ livres[0].resume }}</p>-->
+        <!--<button class="btn btn-info pull-right">Ajouter au panier</button>-->
+      <!--</div>-->
+    <!--</li>-->
+  <!--</ul>-->
+
+<!--</div>-->
+
+<!-- Partie 03 -->
+<div id="bookListWrapper">
+  <ul class="list-unstyled">
+    <li class="book"
+        *ngFor="let livre of livres"
+        [ngStyle]="{'background': 'url(../../assets/images/' + livre.image + ') no-repeat' } ">
+      <div class="book-details clearfix">
+        <h3 class="text-primary">{{ livre.titre }}</h3>
+        <p class="text-red">{{ livre.prix }}</p>
+        <ul class="list-unstyled list-inline">
+          <li>Genre: {{ livre.collection }}</li>
+          <li>Editeur: {{ livre.editeur }}</li>
+          <li>Parution: {{ livre.parution }}</li>
+        </ul>
+        <p class="description">{{ livre.resume }}</p>
+        <button class="btn btn-info pull-right" (click)="ajouterAuPanier(livre)">Ajouter au panier</button>
+      </div>
+    </li>
+  </ul>
+
+</div>

@@ -1,0 +1,25 @@
+<p>
+  Votre panier contient {{panier.length}} livre(s)
+</p>
+
+<!--<ul>-->
+  <!--<li *ngFor="let achat of panier">-->
+    <!--{{achat.titre}}-->
+  <!--</li>-->
+<!--</ul>-->
+
+<div id="bookListWrapper">
+  <ul class="list-unstyled">
+    <li class="book"
+        *ngFor="let achat of panier"
+        [ngStyle]="{'background': 'url(../../assets/images/' + achat.image + ') no-repeat' } ">
+      <div class="book-details clearfix">
+        <h3 class="text-primary">{{ achat.titre }}</h3>
+        <p class="text-red">{{ achat.prix }}</p>
+
+        <button class="btn btn-success pull-right" (click)="acheter(achat)">Acheter</button>
+      </div>
+    </li>
+  </ul>
+
+</div>

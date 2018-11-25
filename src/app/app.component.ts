@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+
+  appDetails = {
+    titre: 'Bibliothèque en ligne',
+    tag: '1 Million de livres pour vous'
+  };
 }

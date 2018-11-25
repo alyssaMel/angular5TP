@@ -1,0 +1,32 @@
+@import "../../assets/styles/colors";
+
+#bookListWrapper {
+  width: 100%;
+  padding: 50px;
+}
+
+#bookListWrapper input {
+  width: 25%;
+}
+
+#bookListWrapper .book {
+  border: 1px solid gray;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#bookListWrapper .book .book-details {
+  margin-left: 160px;
+}
+
+#form-group{
+  padding-top: 20px;
+}
+
+.text-red {
+  color: $red;
+}
+
+.description {
+  margin-top: 20px;
+}
